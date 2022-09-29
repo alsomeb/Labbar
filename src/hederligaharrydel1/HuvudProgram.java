@@ -87,6 +87,6 @@ public class HuvudProgram {
 
     }
     public static void printAnnonsTexter (ArrayList<FordonsAnnons> list) {
-        list.forEach( annons -> System.out.println(annons.getAnnonsText() ));
+        list.forEach( annons -> System.out.println(annons.getAnnonsText()) );
     }
 }
