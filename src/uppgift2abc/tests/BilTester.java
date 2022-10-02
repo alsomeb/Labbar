@@ -1,7 +1,7 @@
-package uppgift2ab.tests;
+package uppgift2abc.tests;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import uppgift2ab.Bil;
+import uppgift2abc.Bil;
 
 class BilTester {
 

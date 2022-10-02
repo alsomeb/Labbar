@@ -1,7 +1,7 @@
-package uppgift2ab.tests;
+package uppgift2abc.tests;
 
 import org.junit.jupiter.api.Test;
-import uppgift2ab.Tåg;
+import uppgift2abc.Tåg;
 
 import static org.junit.jupiter.api.Assertions.*;
 

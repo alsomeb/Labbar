@@ -1,6 +1,10 @@
-package uppgift2ab;
+package uppgift2abc;
 
-abstract class Fordon {
+abstract class Fordon implements Printable {
+    // Behöver ej implement metoden printMeInterface() i denna klass pga abstract!
+    // metoden måste skapas och overrides i subklasserna, dynamisk bindning
+    // Sedan ärvs detta interface till subklasserna, behöver ej skriva implements i namnet !
+
     private int hastighet; // or protected making them accessible in the same package and subclasses.
     private int vikt;
 

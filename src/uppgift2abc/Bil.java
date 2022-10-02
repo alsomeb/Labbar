@@ -1,13 +1,11 @@
-package uppgift2ab;
+package uppgift2abc;
 
-public class Cykel extends Fordon{
-
-    // Skrev inga tester på cyckel, samma som Bil
+public class Bil extends Fordon implements HjulBuren{
 
     private int antalVäxlar;
     private int växelJustNu;
 
-    public Cykel(int hastighet, int vikt, int antalVäxlar, int växelJustNu) {
+    public Bil(int hastighet, int vikt, int antalVäxlar, int växelJustNu) {
         super(hastighet, vikt); // <-- från Fordon
         this.antalVäxlar = antalVäxlar;
         this.växelJustNu = växelJustNu;
@@ -33,6 +31,7 @@ public class Cykel extends Fordon{
         }
     }
 
+
     // Getters n Setters
     public int getAntalVäxlar() {
         return antalVäxlar;
@@ -50,10 +49,24 @@ public class Cykel extends Fordon{
         this.växelJustNu = växelJustNu;
     }
 
+
     @Override
     void printMe() {
         System.out.println(
                 "\nVikt: " + getVikt() + "\nHastighet: " + getHastighet() + "\nAntal växlar: " + antalVäxlar + "\nVäxel just nu: " + växelJustNu
         );
+    }
+
+    @Override
+    public void printMeInterface() {
+        System.out.println(
+                "\nVikt: " + getVikt() + "\nHastighet: " + getHastighet() + "\nAntal växlar: " + antalVäxlar + "\nVäxel just nu: " + växelJustNu
+        );
+    }
+
+
+    @Override
+    public int antalHjul() {
+        return 4;
     }
 }

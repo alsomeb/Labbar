@@ -1,6 +1,6 @@
-package uppgift2ab;
+package uppgift2abc;
 
-public class Båt extends Fordon{
+public class Båt extends Fordon {
 
     int dödvikt;
 
@@ -26,6 +26,14 @@ public class Båt extends Fordon{
 
     @Override
     void printMe() {
+        System.out.println(
+                "\nVikt: " + getVikt() + "\nHastighet: " + getHastighet() + "\nDödvikt: " + dödvikt
+        );
+    }
+
+
+    @Override
+    public void printMeInterface() {
         System.out.println(
                 "\nVikt: " + getVikt() + "\nHastighet: " + getHastighet() + "\nDödvikt: " + dödvikt
         );
