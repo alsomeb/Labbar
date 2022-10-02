@@ -93,7 +93,7 @@ public class HuvudProgram {
         }
     }
 
-
+    // Main metod, kommer ur en statisk kontext
     public static void main(String[] args) {
         new HuvudProgram();
     }
