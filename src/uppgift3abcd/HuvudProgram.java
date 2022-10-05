@@ -48,6 +48,10 @@ public class HuvudProgram {
         //Printa allt
         System.out.println();
         printAllCourses(allParticipants);
+
+        System.out.println();
+        List<Participation> javaOnly = getListOfParticipantsByCourse(java, allParticipants);
+        System.out.println(javaOnly);
     }
 
 
@@ -79,6 +83,17 @@ public class HuvudProgram {
                 System.out.println(participant.getStudent());
             }
         }
+    }
+
+    public List<Participation> getListOfParticipantsByCourse (Course course, List<Participation> allParticipants) {
+        List<Participation> participationsByCourseNameList = new ArrayList<>();
+
+        for (Participation participant : allParticipants) {
+            if(participant.getCourse() == course) {
+                participationsByCourseNameList.add(participant);
+            }
+        }
+        return participationsByCourseNameList;
     }
 
 
