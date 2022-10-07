@@ -29,6 +29,20 @@ public class HuvudProgram {
 
         // Loopar genom listan och ger arean för varje figur
         figures.forEach(figure -> printAreaOfFigure(figure));
+
+
+        // Figure Factory
+        FigureFactory factory = new FigureFactory();
+        List<Figure> figurer = new LinkedList<>();
+        figurer.add(factory.getFigure(FigureSpecification.CIRCLE));
+        figurer.add(factory.getFigure(FigureSpecification.RECTANGLE));
+        figurer.add(factory.getFigure(FigureSpecification.LIKESIDEDTRIANGLE));
+
+        for(Figure figure : figurer) {
+            System.out.println("Figure: " + figure.getClass().getSimpleName() + " with an area of: " + figure.calcArea()); // getSimpleName == klassens namn bara
+        }
+
+
     }
 
     public void printAreaOfFigure(Figure figure) {
