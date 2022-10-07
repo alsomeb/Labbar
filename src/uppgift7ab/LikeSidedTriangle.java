@@ -32,8 +32,6 @@ public class LikeSidedTriangle extends Figure{
         return Math.abs(getA().getY() - getC().getY());
     }
 
-
-
     @Override
     public double calcArea() {
         return (getBase() * getHeight()) / 2;

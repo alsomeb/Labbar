@@ -32,14 +32,16 @@ public class HuvudProgram {
 
 
         // Figure Factory
-        FigureFactory factory = new FigureFactory();
-        List<Figure> figurer = new LinkedList<>();
-        figurer.add(factory.getFigure(FigureSpecification.CIRCLE));
-        figurer.add(factory.getFigure(FigureSpecification.RECTANGLE));
-        figurer.add(factory.getFigure(FigureSpecification.LIKESIDEDTRIANGLE));
+        System.out.println("\n----FACTORY PATTERN----");
+        FigureFactory factory = new FigureFactory(); // Klass som skapar figurer mha en ENUM, skippa magic strings
 
-        for(Figure figure : figurer) {
-            System.out.println("Figure: " + figure.getClass().getSimpleName() + " with an area of: " + figure.calcArea()); // getSimpleName == klassens namn bara
+        List<Figure> figurerna = new LinkedList<>();
+        figurerna.add(factory.getFigure(FigureSpecification.CIRCLE));
+        figurerna.add(factory.getFigure(FigureSpecification.RECTANGLE));
+        figurerna.add(factory.getFigure(FigureSpecification.LIKESIDEDTRIANGLE));
+
+        for(Figure figur : figurerna) {
+            printAreaOfFigure(figur);
         }
 
 
